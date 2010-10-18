@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: ActiveRecord::ConnectionAdapters::MysqlAdapter</title>
+
+	<link rel="stylesheet" href="../../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../../lib/sixarm_ruby_mysql_adapter_extensions_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/sixarm_ruby_mysql_adapter_extensions.rb">lib/sixarm_ruby_mysql_adapter_extensions.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link">Object</p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#M000000">#add_index_with_unless_exists</a></li>
+					
+					<li><a href="#M000001">#remove_index_with_unless_doesnt_exist</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../../README_rdoc.html">README.rdoc</a></li>
+				
+					<li class="file"><a href="../../sixarm_ruby_mysql_adapter_extensions_gemspec.html">sixarm_ruby_mysql_adapter_extensions.gemspec</a></li>
+				
+					<li class="file"><a href="../../sixarm_ruby_mysql_adapter_extensions_sha512_txt.html">sixarm_ruby_mysql_adapter_extensions.sha512.txt</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../../ActiveRecord.html">ActiveRecord</a></li>
+				
+					<li><a href="../../ActiveRecord/ConnectionAdapters.html">ActiveRecord::ConnectionAdapters</a></li>
+				
+					<li><a href="../../ActiveRecord/ConnectionAdapters/MysqlAdapter.html">ActiveRecord::ConnectionAdapters::MysqlAdapter</a></li>
+				
+					<li><a href="../../MysqlAdapterExtensionsTest.html">MysqlAdapterExtensionsTest</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">ActiveRecord::ConnectionAdapters::MysqlAdapter</h1>
+
+		<div id="description">
+			
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="add-index-with-unless-exists-method" class="method-detail ">
+				<a name="M000000"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">add_index_with_unless_exists</span><span
+						class="method-args">(table_name, column_name, options = {})</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p class="missing-docs">(Not documented)</p>
+					
+
+					
+					<div class="method-source-code"
+						id="add-index-with-unless-exists-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/sixarm_ruby_mysql_adapter_extensions.rb, line 20</span>
+20:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">add_index_with_unless_exists</span> <span class="ruby-identifier">table_name</span>, <span class="ruby-identifier">column_name</span>, <span class="ruby-identifier">options</span> = {}
+21:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">options</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Hash</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">options</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">:force</span>)
+22:           <span class="ruby-keyword kw">begin</span>
+23:             <span class="ruby-identifier">add_index_without_unless_exists</span> <span class="ruby-identifier">table_name</span>, <span class="ruby-identifier">column_name</span>, <span class="ruby-identifier">options</span>
+24:           <span class="ruby-keyword kw">rescue</span>
+25:             <span class="ruby-keyword kw">if</span> <span class="ruby-regexp re">/^Mysql::Error: Duplicate key name /</span>.<span class="ruby-identifier">match</span>(<span class="ruby-identifier">$!</span>.<span class="ruby-identifier">message</span>)
+26:               <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Failed to create index #{table_name} #{column_name} #{options.inspect}&quot;</span>
+27:             <span class="ruby-keyword kw">else</span>
+28:               <span class="ruby-identifier">raise</span> <span class="ruby-identifier">$!</span>
+29:             <span class="ruby-keyword kw">end</span>
+30:           <span class="ruby-keyword kw">end</span>
+31:         <span class="ruby-keyword kw">else</span>
+32:           <span class="ruby-identifier">add_index_without_unless_exists</span> <span class="ruby-identifier">table_name</span>, <span class="ruby-identifier">column_name</span>, <span class="ruby-identifier">options</span>
+33:         <span class="ruby-keyword kw">end</span>
+34:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="remove-index-with-unless-doesnt-exist-method" class="method-detail ">
+				<a name="M000001"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">remove_index_with_unless_doesnt_exist</span><span
+						class="method-args">(table_name, options = {})</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p class="missing-docs">(Not documented)</p>
+					
+
+					
+					<div class="method-source-code"
+						id="remove-index-with-unless-doesnt-exist-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/sixarm_ruby_mysql_adapter_extensions.rb, line 37</span>
+37:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">remove_index_with_unless_doesnt_exist</span> <span class="ruby-identifier">table_name</span>, <span class="ruby-identifier">options</span> = {}
+38:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">options</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Hash</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">options</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">:force</span>)
+39:           <span class="ruby-keyword kw">begin</span>
+40:             <span class="ruby-identifier">remove_index_without_unless_doesnt_exist</span> <span class="ruby-identifier">table_name</span>, <span class="ruby-identifier">options</span>
+41:           <span class="ruby-keyword kw">rescue</span>
+42:             <span class="ruby-keyword kw">if</span> <span class="ruby-regexp re">/^Mysql::Error: Can't DROP/</span>.<span class="ruby-identifier">match</span>(<span class="ruby-identifier">$!</span>.<span class="ruby-identifier">message</span>)
+43:               <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Failed to drop index #{table_name} #{options.inspect}&quot;</span>
+44:             <span class="ruby-keyword kw">else</span>
+45:               <span class="ruby-identifier">raise</span> <span class="ruby-identifier">$!</span>
+46:             <span class="ruby-keyword kw">end</span>
+47:           <span class="ruby-keyword kw">end</span>
+48:         <span class="ruby-keyword kw">else</span>
+49:           <span class="ruby-identifier">remove_index_without_unless_doesnt_exist</span> <span class="ruby-identifier">table_name</span>, <span class="ruby-identifier">options</span>
+50:         <span class="ruby-keyword kw">end</span>
+51:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+
