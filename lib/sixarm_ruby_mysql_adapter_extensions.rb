@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 =begin rdoc
 
 = SixArm Ruby Gem: MySQL Adapter extensions
@@ -16,7 +18,7 @@ See http://www.dweebd.com/page/2/
 module ActiveRecord
   module ConnectionAdapters
     class MysqlAdapter
- 
+
       def add_index_with_unless_exists table_name, column_name, options = {}
         if options.kind_of?(Hash) && options.delete(:force)
           begin
@@ -33,7 +35,7 @@ module ActiveRecord
         end
       end
       alias_method_chain :add_index, :unless_exists
- 
+
       def remove_index_with_unless_doesnt_exist table_name, options = {}
         if options.kind_of?(Hash) && options.delete(:force)
           begin
@@ -50,7 +52,7 @@ module ActiveRecord
         end
       end
       alias_method_chain :remove_index, :unless_doesnt_exist
- 
+
     end
   end
 end
