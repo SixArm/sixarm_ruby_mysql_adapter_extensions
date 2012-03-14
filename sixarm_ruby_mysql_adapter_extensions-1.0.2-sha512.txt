@@ -1,0 +1,1 @@
+dddfb812122ff2fc00c888ac392d90a3e1d299b7c2917c61ccede81a5260bb83c2355c07ac5916c65b2e7b010dcc60652f34b4699c5cb0763a303c52136dd7b4  sixarm_ruby_mysql_adapter_extensions-1.0.2.gem
