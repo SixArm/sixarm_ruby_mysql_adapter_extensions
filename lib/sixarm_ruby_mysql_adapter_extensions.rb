@@ -1,22 +1,14 @@
 # -*- coding: utf-8 -*-
-
 =begin rdoc
-
-= SixArm Ruby Gem: MySQL Adapter extensions
-
-Author:: Joel Parker Henderson, joelparkerhenderson@gmail.com
-Copyright:: Copyright (c) 2006-2010 Joel Parker Henderson
-License:: CreativeCommons License, Non-commercial Share Alike
-License:: LGPL, GNU Lesser General Public License
-
-See http://www.dweebd.com/page/2/
-
+Please see README
 =end
 
-# Allows you to specify indices to add in a migration that will only be created if they do not
-# already exist, or to remove indices only if they already exist
+
 module ActiveRecord
   module ConnectionAdapters
+
+    # Specify indices to add in a migration that are added if they are missing, otherwise ignored
+
     class MysqlAdapter
 
       def add_index_with_unless_exists table_name, column_name, options = {}
@@ -35,6 +27,8 @@ module ActiveRecord
         end
       end
       alias_method_chain :add_index, :unless_exists
+
+      # Specify indices to remove in a migration that are dropped if they exist, otherwise ignored
 
       def remove_index_with_unless_doesnt_exist table_name, options = {}
         if options.kind_of?(Hash) && options.delete(:force)
