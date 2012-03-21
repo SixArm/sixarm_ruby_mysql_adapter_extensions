@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
 
   s.name              = "sixarm_ruby_mysql_adapter_extensions"
-  s.summary           = "SixArm Ruby Gem: MySQL Adapter extensions for Ruby On Rails"
+  s.summary           = "SixArm.com » Ruby » MySQL Adapter extensions for Ruby On Rails"
   s.version           = "1.0.2"
   s.author            = "SixArm"
   s.email             = "sixarm@sixarm.com"
