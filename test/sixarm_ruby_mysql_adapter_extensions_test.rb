@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-require 'minitest/autorun'
-require 'simplecov'
+require "minitest/autorun"
+require "simplecov"
 SimpleCov.start
-require 'sixarm_ruby_mysql_adapter_extensions'
+require "sixarm_ruby_mysql_adapter_extensions"
 
 class MysqlAdapterExtensionsTest < Test::Unit::TestCase
 
