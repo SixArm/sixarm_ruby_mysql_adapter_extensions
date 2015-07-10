@@ -21,12 +21,7 @@ Gem::Specification.new do |s|
   s.has_rdoc          = true
 
   s.files = [
-    ".gemtest",
-    "CHANGES.md",
-    "LICENSE.md",
     "Rakefile",
-    "README.md",
-    "VERSION",
     "lib/sixarm_ruby_mysql_adapter_extensions.rb",
   ]
 
