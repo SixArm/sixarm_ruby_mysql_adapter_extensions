@@ -1,4 +1,4 @@
-# Ruby » <br> MySQL Adapter extensions
+SixArm.com → Ruby → <br> MySQL Adapter extensions
 
 * Doc: <http://sixarm.com/sixarm_ruby_mysql_adapter_extensions/doc>
 * Gem: <http://rubygems.org/gems/sixarm_ruby_mysql_adapter_extensions>
