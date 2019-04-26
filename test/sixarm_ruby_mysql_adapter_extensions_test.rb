@@ -4,7 +4,7 @@ require "simplecov"
 SimpleCov.start
 require "sixarm_ruby_mysql_adapter_extensions"
 
-class MysqlAdapterExtensionsTest < Test::Unit::TestCase
+class MysqlAdapterExtensionsTest < Minitest::Test
 
 end
 
